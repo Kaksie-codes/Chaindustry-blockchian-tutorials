@@ -1,0 +1,22 @@
+.red{
+    color: red;
+    
+}
+#brown{
+color: brown;
+}
+.green{
+    color: green;
+}
+h3{
+color: yellow;
+}
+/* p{
+    color: white; 
+    background-color: black;
+} */
+img{
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+}
