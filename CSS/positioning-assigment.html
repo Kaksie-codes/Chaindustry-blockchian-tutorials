@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+        }
+        .red{
+            background-color: red;            
+        }
+        .blue{
+            background-color: blue;   
+            position: fixed;
+            bottom: 0;
+            left: 0;         
+        }
+        .red, .blue{
+            width: 100vw;
+            height: 100px;
+        }
+        .box{
+            width: 120px;
+            height: 120px;
+        }
+        .green{
+            background-color: green;
+        }
+        .yellow{
+            background-color: yellow;
+        }
+        .wrapper{
+            width: 300px;
+            height: 260px;
+            /* background-color: brown; */
+            margin: auto;
+            margin-top: 40px;
+            position: relative;
+        }
+        #box-1{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        #box-2{
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        #box-3{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+        #box-4{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="red">candy</div>
+    <div class="wrapper">
+        <div class="green box" id="box-1"></div>
+        <div class="green box" id="box-2"></div>
+        <div class="yellow box" id="box-3"></div>
+        <div class="yellow box" id="box-4"></div>
+    </div>
+    <div class="blue"></div>
+</body>
+</html>
