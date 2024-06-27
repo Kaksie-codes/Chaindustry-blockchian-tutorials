@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            font-size: 35px;
+        }
+        img{
+            height: 250px;
+            width: 100vw;
+            object-fit: cover;
+        }
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 20px;
+        gap: 5px;
+    }
+    .box{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 15px;
+        background-color: aquamarine;
+        height: 200px;
+    }
+    /* media queries for tablet version */
+    @media screen and (min-width:650px){
+        body{
+            background-color: brown;
+        }
+        .container{
+            grid-template-columns: repeat(3, 1fr);
+        }
+        img{
+            height: 400px;
+        }
+    }
+    /* media queries for desktop version */
+    @media screen and (min-width:1200px){
+        h1{
+            font-size: 50px;
+        }
+        body{
+            background-color: yellow;
+        }
+        .container{
+            grid-template-columns: repeat(6, 1fr);
+        }
+    }
+    </style>
+</head>
+<body>
+    <h1>Mobile First development</h1>
+    <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=600" alt="main image">
+    <div class="container">
+        <div class="box">
+            <span>1</span>
+            <p>Blockchain</p>
+        </div>        
+        <div class="box">
+            <span>2</span>
+            <p>Design</p>
+        </div>
+        <div class="box">
+            <span>3</span>
+            <p>Crypto trading</p>
+        </div>
+        <div class="box">
+            <span>4</span>
+            <p>video Editing</p>
+        </div>
+        <div class="box">
+            <span>5</span>
+            <p>Marketing</p>
+        </div>
+        <div class="box">
+            <span>6</span>
+            <p>Yahoo</p>
+        </div>
+    </div>
+</body>
+</html>
