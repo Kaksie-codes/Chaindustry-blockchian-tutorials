@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complex Assignment</title>
+    <style>
+        .container{
+            width: min(90%, 1200px);
+            /* background-color: yellow; */
+            height: auto;
+            margin-inline: auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+        .box{
+            background-color: red;
+            color: white;
+            height: 200px;
+            font-size: 50px;
+            display: grid;
+            place-items: center;
+            border-radius: 15px;
+        }
+        .box:nth-child(1){
+            background-color: green;
+        }
+        .box:nth-child(2){
+            background-color: black;
+        }
+        .box:nth-child(2){
+            background-color: black;
+        }
+        .box:nth-child(3){
+            background-color: orange;
+        }
+        .box:nth-child(4){
+            background-color: pink;
+        }
+        .box:nth-child(5){
+            background-color: brown;
+        }
+        .box:nth-child(6){
+            background-color: blue;
+        }
+        .box:nth-child(7){
+            background-color: violet;
+        }
+        .box:nth-child(8){
+            background-color: maroon;
+        }
+        .box:nth-child(9){
+            background-color: yellow;
+        }
+
+        @media screen and (min-width:632px) {
+            .container{
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media screen and (min-width:850px) {
+            .container{
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        @media screen and (min-width:1200px) {
+            .box{
+                height: auto;
+            }
+            .container{
+                grid-template-columns: repeat(5, 1fr);
+                height: 100vh;
+            }
+            .box:nth-child(1){
+                grid-column: 1 / 6;
+                grid-row: 4 / 5;
+            }
+            .box:nth-child(2){
+                grid-column: 3 / 5;
+                grid-row: 2 / 3;
+            }
+            .box:nth-child(3){
+                grid-column: 1 / 2;
+                grid-row: 1 / 4;
+            }
+            .box:nth-child(4){
+                grid-column: 2 / 4;
+                grid-row: 3 / 4;
+            }
+            .box:nth-child(9){
+                grid-column: 2 / 3;
+                grid-row: 2 / 3;
+            }
+            .box:nth-child(8){
+                grid-column: 5 / 6;
+                grid-row: 2 / 4;
+            }
+            .box:nth-child(6){
+                grid-column: 2 / 4;
+                grid-row: 1 / 2;
+            }
+            .box:nth-child(7){
+                grid-column: 4 / 6;
+                grid-row: 1 / 2;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+    </div>
+</body>
+</html>
