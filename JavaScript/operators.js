@@ -30,9 +30,11 @@ console.log(num1);
 
 let number1 = 2;
 let number2 = 3;
-// numbr1 = number1 + 2;
-number1+=2
-console.log(number1);
+let number3 = 1;
+// number3 = number1 + number3;
+number3+=number1;
+// number1+=2
+console.log(number3);
 
 
 // Comparison Operators:
