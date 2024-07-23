@@ -12,6 +12,11 @@
 // ++ (Increment): a++ or ++a
 // -- (Decrement): a-- or --a
 
+let num1 = 20;
+num1 = num1 + 1;
+// --num1;
+num1+=6;
+console.log(num1);
 
 
 // Assignment Operators:
@@ -23,6 +28,11 @@
 // /= (Divide and assign): a /= b
 // %= (Modulus and assign): a %= b
 
+let number1 = 2;
+let number2 = 3;
+// numbr1 = number1 + 2;
+number1+=2
+console.log(number1);
 
 
 // Comparison Operators:
