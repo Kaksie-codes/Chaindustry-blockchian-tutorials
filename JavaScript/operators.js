@@ -12,11 +12,11 @@
 // ++ (Increment): a++ or ++a
 // -- (Decrement): a-- or --a
 
-let num1 = 20;
-num1 = num1 + 1;
-// --num1;
-num1+=6;
-console.log(num1);
+// let num1 = 20;
+// num1 = num1 + 1;
+// // --num1;
+// num1+=6;
+// console.log(num1);
 
 
 // Assignment Operators:
@@ -28,13 +28,13 @@ console.log(num1);
 // /= (Divide and assign): a /= b
 // %= (Modulus and assign): a %= b
 
-let number1 = 2;
-let number2 = 3;
-let number3 = 1;
+// let number1 = 2;
+// let number2 = 3;
+// let number3 = 1;
 // number3 = number1 + number3;
-number3+=number1;
+// number3+=number1;
 // number1+=2
-console.log(number3);
+// console.log(number3);
 
 
 // Comparison Operators:
@@ -47,10 +47,12 @@ console.log(number3);
 // < (Less than): a < b
 // >= (Greater than or equal to): a >= b
 // <= (Less than or equal to): a <= b
-
+// console.log(12 >= 12);
 
 // Logical Operators:
 
 // && (Logical AND): a && b
 // || (Logical OR): a || b
 // ! (Logical NOT): !a
+
+// console.log(10 > 2 && (4 > 5 || 5 > 2) )
