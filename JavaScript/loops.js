@@ -78,10 +78,31 @@ do {
 //   }
 
 // example
-// let person = { fname: "John", lname: "Doe", age: 25 };
+let person = { 
+    fname: "John", 
+    lname: "Doe", 
+    age: 25 
+};
+
 // for (let key in person) {
-//   console.log(key + ": " + person[key]);
+//     console.log(key + ": " + person[key]);
 // }
+  
+console.log(person.lname);
+console.log(person['fname']);
+
+let firstname = 'Jack';
+let lastname = 'Robinson'
+// console.log('my name is ' + firstname + " " + lastname);
+console.log(`my name is ${firstname} ${lastname}`);
+let _name = "Maria";
+_name+='-'
+_name+='stella'
+console.log(_name)
+
+console.log(`"Hello 'Sam'"`);
+console.log('hello \'sam\'');
+
 
 
 // for...of Loop: Used to iterate over iterable objects like arrays, strings, maps, etc.
@@ -94,4 +115,15 @@ do {
 // for (let number of numbers) {
 //   console.log(number);
 // }
+let dogs = ['german shepard', 'Terrier', 'ekuke']
 
+// for(let dog of dogs){
+//     console.log(dog);
+// }
+console.log(dogs.length);
+
+// console.log(dogs[5]);
+
+for(let i = 0; i < dogs.length; i++){
+    console.log(dogs[i])
+}
