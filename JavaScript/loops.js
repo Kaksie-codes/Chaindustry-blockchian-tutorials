@@ -120,10 +120,28 @@ let dogs = ['german shepard', 'Terrier', 'ekuke']
 // for(let dog of dogs){
 //     console.log(dog);
 // }
-console.log(dogs.length);
+// console.log(dogs.length);
 
 // console.log(dogs[5]);
 
-for(let i = 0; i < dogs.length; i++){
-    console.log(dogs[i])
+// for(let i = 0; i < dogs.length; i++){
+//     console.log(dogs[i])
+// }
+
+for(let i = 20; i >= 0; i--){
+    if(i % 2 === 0){
+        console.log(i);
+    }
+}
+
+let randomDigit = prompt('Enter a number:')
+
+if(randomDigit > 1000){
+    console.log(`${randomDigit} is greater than 1000`);
+}else if(randomDigit <=999 && randomDigit > 700){
+    console.log(`${randomDigit} is between 1000 and 700`);
+}else if(randomDigit <=699 && randomDigit > 200){
+    console.log(`${randomDigit} is between 700 and 200`);
+}else{
+    console.log(`${randomDigit} is less than  or equal to 200`);
 }
