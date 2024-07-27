@@ -27,3 +27,21 @@
 //     fahrenheitValue = (celsiusValue * (9/5)) + 32;
 //     console.log(fahrenheitValue);
 // }
+
+
+// Even and odd number seperator
+let randomNumbers = [];
+
+for(let count = 1; count <= 20; count++){
+    // generate random numbers
+    let randomNumber = Math.random() * 10;
+
+    // ROund the random numbers to whole numberss
+    let roundedNumber = Math.round(randomNumber)
+
+    // Add each rounded number to the array of numbers
+    randomNumbers.push(roundedNumber);
+    // console.log(roundedNumber)
+}
+
+console.log(randomNumbers)
