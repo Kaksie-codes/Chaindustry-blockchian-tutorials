@@ -26,6 +26,35 @@ function hello(){
 //     hello();
 // }
 // console.log('Random Number:' + Math.random());
-console.log(Math.round(2.7));
-console.log(Math.floor(2.7));
-console.log(Math.ceil(2.7));
+// console.log(Math.round(2.7));
+// console.log(Math.floor(2.7));
+// console.log(Math.ceil(2.7));
+
+function generateNationality(country){
+    if(country === 'USA'){
+        return 'American'
+    }else if(country === 'Nigeria'){
+        return 'Nigerian'
+    }else if(country === 'China'){
+        return 'Chinese'
+    }else{
+        return 'sorry, i dont know your nationality'
+    }
+}
+
+let mynationalty = generateNationality('Cameroon');
+
+console.log({mynationalty});
+
+// function multiplyNum(num1, num2){
+//     let answer =  num1 * num2;
+    // return answer
+// }
+
+const multiplyNum = (num1, num2) => {
+    let answer =  num1 * num2;
+    return answer
+}
+
+let result = multiplyNum(2, 3)
+console.log({result});

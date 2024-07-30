@@ -30,18 +30,74 @@
 
 
 // Even and odd number seperator
-let randomNumbers = [];
+// let randomNumbers = [];
+// let oddNumbers = [];
+// let evenNumbers = [];
 
-for(let count = 1; count <= 20; count++){
-    // generate random numbers
-    let randomNumber = Math.random() * 10;
+// for(let count = 1; count <= 20; count++){
+//     // generate random numbers
+//     // let randomNumber = Math.random() ;
+//     let randomNumber = Math.random() * 10;
+//     // console.log(randomNumber);
+//     // ROund the random numbers to whole numberss
+//     let roundedNumber = Math.round(randomNumber)
 
-    // ROund the random numbers to whole numberss
-    let roundedNumber = Math.round(randomNumber)
+//     // Add each rounded number to the array of numbers
+//     randomNumbers.push(roundedNumber);
+//     // console.log(roundedNumber)
+// }
 
-    // Add each rounded number to the array of numbers
-    randomNumbers.push(roundedNumber);
-    // console.log(roundedNumber)
-}
+// console.log(randomNumbers)
 
-console.log(randomNumbers)
+// randomNumbers.forEach(number => {
+//     console.log(number)
+// })
+
+// randomNumbers.forEach(function(number){
+//     console.log(number)
+// })
+
+// for(thing of randomNumbers){
+//     if(thing % 2 === 0){
+//         evenNumbers.push(thing)
+//     }else{
+//         oddNumbers.push(thing);
+//     }
+//     // console.log('number is:' + thing)
+// }
+
+// console.log({randomNumbers: randomNumbers});
+// console.log({evenNumbers});
+// console.log({oddNumbers});
+
+
+// updated number seperator
+const randomNumbers = [];
+const oddNumbers = [];
+const evenNumbers = [];
+let evenNumber = 0;
+let oddNumber = 0;
+
+// Generate 100 random numbers between 1 and 100
+
+do {
+  const randomNumber = Math.floor(Math.random() * 10);
+  if (randomNumber != 0) {
+    if (randomNumber % 2 === 0 && evenNumber < 10) {
+      evenNumbers.push(randomNumber);
+      evenNumber++;
+      randomNumbers.push(randomNumber);
+    } else if (randomNumber % 2 !== 0 && oddNumber < 10) {
+      oddNumbers.push(randomNumber);
+      oddNumber++;
+      randomNumbers.push(randomNumber);
+    }
+  }
+} while (randomNumbers.length < 20);
+
+console.log(randomNumbers.length);
+console.log(randomNumbers);
+console.log(evenNumbers.length);
+console.log(evenNumbers);
+console.log(oddNumbers.length);
+console.log(oddNumbers);
