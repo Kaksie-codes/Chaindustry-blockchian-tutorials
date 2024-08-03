@@ -72,32 +72,66 @@
 
 
 // updated number seperator
-const randomNumbers = [];
-const oddNumbers = [];
-const evenNumbers = [];
-let evenNumber = 0;
-let oddNumber = 0;
+// const randomNumbers = [];
+// const oddNumbers = [];
+// const evenNumbers = [];
+// let evenNumber = 0;
+// let oddNumber = 0;
 
-// Generate 100 random numbers between 1 and 100
+// // Generate 100 random numbers between 1 and 100
 
-do {
-  const randomNumber = Math.floor(Math.random() * 10);
-  if (randomNumber != 0) {
-    if (randomNumber % 2 === 0 && evenNumber < 10) {
-      evenNumbers.push(randomNumber);
-      evenNumber++;
-      randomNumbers.push(randomNumber);
-    } else if (randomNumber % 2 !== 0 && oddNumber < 10) {
-      oddNumbers.push(randomNumber);
-      oddNumber++;
-      randomNumbers.push(randomNumber);
-    }
+// do {
+//   const randomNumber = Math.floor(Math.random() * 10);
+//   if (randomNumber != 0) {
+//     if (randomNumber % 2 === 0 && evenNumber < 10) {
+//       evenNumbers.push(randomNumber);
+//       evenNumber++;
+//       randomNumbers.push(randomNumber);
+//     } else if (randomNumber % 2 !== 0 && oddNumber < 10) {
+//       oddNumbers.push(randomNumber);
+//       oddNumber++;
+//       randomNumbers.push(randomNumber);
+//     }
+//   }
+// } while (randomNumbers.length < 20);
+
+// console.log(randomNumbers.length);
+// console.log(randomNumbers);
+// console.log(evenNumbers.length);
+// console.log(evenNumbers);
+// console.log(oddNumbers.length);
+// console.log(oddNumbers);
+
+
+// calculator assignment
+function calculate(num1, num2, operation){  
+  if(operation === 'add'){
+    return num1 + num2;
+  }else if(operation === 'substract'){
+    return num1 - num2;
+  }else if(operation === 'multiply'){
+    return num1 * num2;
+  }else if(operation === 'divide'){
+    return num1 / num2;    
+  }else if(operation === 'mod'){
+    console.log('i am doing mod');
+    return num1 % num2;
+    console.log('i am doing mod');
+    
+  }else{
+    console.log('invalid operation')
   }
-} while (randomNumbers.length < 20);
+}
 
-console.log(randomNumbers.length);
-console.log(randomNumbers);
-console.log(evenNumbers.length);
-console.log(evenNumbers);
-console.log(oddNumbers.length);
-console.log(oddNumbers);
+
+let result = calculate(2,0, 'add');
+console.log('result:' + result);
+
+
+
+// Number()
+let num1 = prompt('uout number')
+console.log(typeof Number(num1));
+
+
+
