@@ -5,66 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        button{
-            padding-top: 10px;
-            padding-left: 10px;
-            padding-right: 10px;
-            padding-bottom: 10px;
-            margin-left: 200px;
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        .btn-2{
-            background-color: yellow;
-            /* padding: 20px; */
-            padding: 70px 20px 40px 5px;
-            padding: 100px 20px;
-            padding: 200px 100px 20px ;
-            margin-left: 350px;
+         div > p{
+            border: 2px solid green;
+            padding-right: 100px;
+            padding-left: 20px;
+            padding-top: 30px;
+            padding-bottom: 40px;
+            margin: 10px 0;
         }
-        .parent{
+        p, span{
+            /* border-width: 2px;
             border-color: blue;
-            border-width: 2px;
-            border-style: dotted;
-            border: 2px dotted green;
-            width: 600px;
-           /* margin: 0 auto; */
-           margin-inline: auto;
-           box-sizing: border-box;
+            border-style: dotted; */
+            border: 2px solid  red;
+            width: fit-content;
+            padding-right: 10px;
         }
-        span{
-            color: green;
-        }
-        .parent span{
-            background-color: red;
-            color: white;
-            width: 50%;
-            display: inline-block;            
-        }
-        .parent span:nth-child(2){
-            background-color: blue;
-            color: white;
-        }
-    .red{
-        background-color: red;
-        width: 200px;
-        height: 70px;
-        padding: 10px;
-        border: 2px solid blue;
-        box-sizing: border-box;
-    }
-        
+       
     </style>
 </head>
 <body>
-    <button>Fulani</button>
-    <button class="btn-2">Yoruba</button>
+    <p>How far!</p>
+    <p>How far!</p>
+    <span>heklo</span>
+    <span>heklo</span>
+    <span>heklo</span>
+    <span>heklo</span>
     <div>
-        <p class="red">Africa</p>
-        <p>Asia</p>
+        <p>Aboy abadie?</p>
+        <div>
+            <section>
+                <p>Chaindustry</p>
+            </section>
+        </div>
     </div>
-    <div class="parent">
-        <span>Coding</span>
-        <span>Singing</span>        
-    </div>
-    <span>dancing</span>
 </body>
 </html>
