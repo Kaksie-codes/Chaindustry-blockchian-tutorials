@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #E0F1E7;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        form{
+            background-color: white;
+            width: 60%;
+            /* margin-inline: auto;      */
+            border-radius: 15px;    
+            overflow: hidden;   
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            color: #666565;
+        }
+        .flex-parent{
+            display: flex;
+            /* background-color: yellow; */
+            gap: 15px;
+        }
+        .flex-parent > div{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            /* background-color: blueviolet; */
+            flex: 1;
+        }
+        input{
+            padding: 5px 10px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+        }
+        .email{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .flex-parent .box{
+            border: 1px solid #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            padding: 8px;
+            flex-direction: row;
+            border-radius: 10px;
+            gap: 10px;
+        }
+        .message{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .message textarea{
+            resize: none;
+            height: 100px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+        }
+        .radio-group{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .check{
+            display: flex;
+            gap: 10px;
+        }
+        button{
+            background-color: #0C7D69;
+            color: white;
+            width: 100%;
+            outline: none;
+            border: none;
+            text-align: center;
+            padding: 8px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <h1>Contact Us</h1>
+        <i class="fa fa-coffee" aria-hidden="true"></i>
+        <i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
+        <div class="flex-parent">
+            <div>
+                <label for="">First Name *</label>
+                <input type="text">
+            </div>
+            <div>
+                <label for="">Last Name *</label>
+                <input type="text">
+            </div>            
+        </div>
+        <div class="email">
+            <label for="">Email Address *</label>
+            <input type="text">
+        </div>
+        <div class="radio-group">
+            <h4>Query *</h4>
+            <div class="flex-parent">
+                <div class="box">
+                    <input type="radio">
+                    <label for="">General Enquiry</label>
+                </div>
+                <div class="box">
+                    <input type="radio">
+                    <label for="">support request</label>
+                </div>
+            </div>
+        </div>
+        <div class="message">
+            <label for="">Message *</label>
+            <textarea name="" id=""></textarea>
+        </div>
+        <div class="check">
+            <input type="checkbox">
+            <label for="">I consent to being contacted by the team *</label>
+        </div>
+        <button>Submit</button>
+    </form>
+</body>
+</html>
