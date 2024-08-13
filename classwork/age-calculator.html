@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #F0F0F0;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+        form{
+            background-color: #FFFFFF;
+            padding: 30px;
+        }
+        .flex{
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-bottom: 1px solid #E7E7E7;
+            padding-bottom: 15px;
+            padding-right: 100px;
+        }
+        .flex > div{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            
+        }
+        label{
+            color: #D4D4D4;
+        }
+        input{
+            border: 1px solid #E7E7E7;
+            padding: 10px;
+            width: 100px;
+            border-radius: 8px;
+        }
+        input[placeholder]{
+            font-weight: 600;
+        }
+        button{
+            color: white;
+            background-color: #864DFE;
+            border: none;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            position: absolute;
+            top: -25px;
+            right: 0;
+        }
+        .bottom{
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <div class="flex">
+            <div>
+                <label for="">Day</label>
+                <input type="number" max="31" min="1" placeholder="DD">
+            </div>
+            <div>
+                <label for="">Month</label>
+                <input type="number" max="12" min="1" placeholder="MM">
+            </div>
+            <div>
+                <label for="">Year</label>
+                <input type="number" min="1900" placeholder="YY">
+            </div>
+        </div>
+        <div class="bottom">
+            <button>
+                <i class="fa fa-arrow-down" aria-hidden="true"></i>
+            </button>
+            <div class="content">
+                <div>
+                    <span class="dash">--</span>
+                    <span>Years</span>
+                </div>
+                <div>
+                    <span class="dash">--</span>
+                    <span>Months</span>
+                </div>
+                <div>
+                    <span class="dash">--</span>
+                    <span>Days</span>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
