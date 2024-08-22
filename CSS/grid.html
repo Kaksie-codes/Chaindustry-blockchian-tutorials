@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- Internal CSS -->
     <style>
         *{
             padding: 0;
@@ -11,106 +12,119 @@
             box-sizing: border-box;
         }
         .container{
-            height: 100vh;
-            width: 70vw;
             background-color: yellow;
-            /* margin: 0 auto; */
+            width: 80%;
+            height: 500px;
             margin-inline: auto;
             display: grid;
-            /* gap: 10px; */
-            /* justify-content: center; */
-            overflow: hidden;
-            /* grid-template-columns: 30px 70px; */
-            /* grid-template-columns: repeat(auto-fill, 100px); */
-            /* grid-template-columns: 1fr 3fr 1fr;
-            grid-template-rows: 1fr 4fr 1fr; */
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(4, 2fr);
+            /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
+            /* grid-template-rows: 1fr 3fr 2fr 5fr; */
+            /* grid-template-columns: repeat(auto-fit, 150px); */
+            gap: 10px;
+            /* column-gap: 10px; */
         }
-        .box{
-            background-color: blue;
-            font-size: 40px;
-            color: white;
-            display: grid;
-            place-items: center;
-        }
+        /* .box{
+            width: 150px;
+        } */
         .box:nth-child(1){
-            background-color: blueviolet;
-            /* grid-column-start: 2; */
-            /* grid-column-end: 5; */
-            /* grid-column: 2 / 5; */
-            grid-column: 2 / span 3;
+            background-color: blue;
+            
         }
         .box:nth-child(2){
-            background-color: brown;
-            grid-row: 1 / 4;
+            background-color: rgb(15, 166, 78);
+            /* grid-column-start: 2;
+            grid-column-end: 5; */
+            grid-column: 2/5;
         }
         .box:nth-child(3){
-            background-color: green;
-            grid-row: 2 / 4;
-            grid-column: 4 / 5;
+            background-color: #7dab13;
+            grid-column: span 4;
+            grid-row: span 2;
+        }
+        .box:nth-child(4){
+            background-color: rgb(42, 57, 18);
         }
         .box:nth-child(5){
-            background-color: pink;
-            grid-row: 3 / 4;
-            grid-column: 2 / 4;
+            background-color: rgb(255, 115, 0);
+        }
+        .box:nth-child(6){
+            background-color: rgb(0, 110, 255);
+            grid-column: 3/4;
+            grid-row: 4/6;
+        }
+        .box:nth-child(7){
+            background-color: rgb(234, 115, 115);
+        }
+        .box:nth-child(8){
+            background-color: rgb(187, 255, 0);
+        }
+        .box:nth-child(9){
+            background-color: rgb(54, 3, 3);
         }
         .wrapper{
-            height: 100vh;
-            width: 70vw;
-            color: white;
-            background-color: yellow;
-            margin: 0 auto;
             display: grid;
+            color: white;
+            width: 70%;
+            margin-inline: auto;
+            grid-template-columns: 1fr 3fr 1fr;
+            grid-template-rows: 1fr 2fr 1fr;
             grid-template-areas: 
-            'headboy headboy headboy'
-            'sidebar1 content sidebar2'
-            'sidebar1 footer footer'
+            "sidebar header header"
+            "sidebar content mini-sidebar"
+            "sidebar footer footer"
             ;
-            grid-template-rows: 100px 1fr 100px;
-            grid-template-columns: 100px 1fr 100px;
+            height: 500px;
         }
-        header{
-            background-color: blue;
-            grid-area: headboy;
-        }
-        .sidebar-1{
-            background-color: purple;
-            grid-area: sidebar1;
-        }
-        .sidebar-2{
-            background-color: aqua;
-            grid-area: sidebar2;
-        }
-        .content{
-            background-color: blueviolet;
-            grid-area: content;
+        .pan{
             display: grid;
             place-items: center;
+            /* align-items: center;
+            justify-content: center; */
         }
-        footer{
-            background-color: green;
+        .pan:nth-child(1) {
+            background-color: rgb(255, 115, 0);
+            grid-area: header;
+        }
+        .pan:nth-child(2) {
+            background-color: rgb(0, 255, 72);
+            grid-area: sidebar;
+        }
+        .pan:nth-child(3) {
+            background-color: rgb(98, 0, 255);
+        }
+        .pan:nth-child(4) {
+            background-color: rgb(255, 247, 0);
             grid-area: footer;
         }
+        .pan:nth-child(5) {
+            background-color: rgb(38, 0, 255);
+        }
+
     </style>
 </head>
 <body>
-    <div class="container">
+    <!-- <div class="container">
         <div class="box">1</div>
         <div class="box">2</div>
         <div class="box">3</div>
         <div class="box">4</div>
         <div class="box">5</div>
         <div class="box">6</div>
-        <!-- <div class="box">7</div>
+        <div class="box">7</div>
         <div class="box">8</div>
-        <div class="box">9</div> -->
-    </div>
+        <div class="box">9</div>
+    </div> -->
+    <br>
+    <br>
+    <br>
+    <h1>Grid Template Area Example</h1>
     <div class="wrapper">
-        <header>header</header>
-        <aside class="sidebar-1">Sidebar 1</aside>
-        <aside class="sidebar-2">Sidebar 2</aside>
-        <div class="content">content</div>
-        <footer>footer</footer>
+        <div class="pan">header</div>
+        <div class="pan">sidebar</div>
+        <div class="pan">content</div>
+        <div class="pan">footer</div>
+        <div class="pan">mini sidebar</div>
     </div>
 </body>
 </html>
