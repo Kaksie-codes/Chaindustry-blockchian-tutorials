@@ -29,12 +29,14 @@ let num4 = 14;
 // ++ (Increment): a++ or ++a
 let a = 6;
 // console.log({a});
-// a++;
+a++;
 ++a;
 // console.log({a});
 
 // -- (Decrement): a-- or --a
 let b;
+// console.log({b});
+b--;
 // console.log({b});
 
 // V = IR
@@ -52,10 +54,9 @@ let FahrenheitVal;
 // console.log({FahrenheitVal})
 
 let num5 = 20;
-// console.log({num5})
-// num5 = num5 + 1;
-num5+=10;
-// console.log({num5})
+// console.log({num5});
+num5*=10;
+// console.log({num5});
 // // --num1;
 
 
@@ -66,8 +67,9 @@ num5+=10;
 let country = 'Azerbaijan'
 
 // += (Add and assign): a += b (equivalent to a = a + b)
+
 let favNumber = 7;
-favNumber +=favNumber
+favNumber +=favNumber;
 // console.log({favNumber})
 
 // -= (Subtract and assign): a -= b
@@ -99,19 +101,21 @@ number1+=2;
 
 // Comparison Operators:
 // == (Equal to): a == b
-console.log(5 == "5");
+// console.log(5 == "5M");
+// console.log(5 == "50");
 
 // === (Strict equal to): a === b
-console.log(5 === "5");
+// console.log(5 === "5");
 
 // != (Not equal to): a != b
-console.log(5 != "5");
+// console.log(5 != "5");
 
 // !== (Strict not equal to): a !== b
-console.log(5 !== "5");
+// console.log(5 !== "5");
+// console.log(!(5 == "5"));
 
 // > (Greater than): a > b
-console.log(5 > 5);
+// console.log(!(!(5 > 5)));
 
 // < (Less than): a < b
 console.log(10 < 5);
@@ -124,10 +128,16 @@ console.log(12 <= 12);
 
 // Logical Operators:
 // && (Logical AND): a && b
-console.log(12 <= 12 && 6 >= 12 );
+console.log(!(!(12 <= 12)) && 6 >= 12 );
+
+(5 > 13) && console.log('yes Boss!');
+
+console.log((!(!(12 <= 12)) || 6 >= 12) ? 'running' : 'not running');
+// (!(!(12 <= 12)) && 6 >= 12 ) ? 'running' : 'not running';
 
 // || (Logical OR): a || b
 console.log(12 <= 12 || 6 >= 12 );
+
 
 // ! (Logical NOT): !a
 let isMarried = false;
