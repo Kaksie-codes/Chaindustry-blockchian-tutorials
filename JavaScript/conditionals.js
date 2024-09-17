@@ -7,10 +7,15 @@
 // if (condition) {
 //   code to execute if condition is true
 // }
+// let animal = 5;
+
+// if(animal === '5'){
+//     console.log('Greater than');    
+// }
 
 // let password = '12345678';
 
-// if(password === '12345678wqwttrtry'){
+// if(!(password !== 12345678)){
 //     console.log('logged in successfully');
 // }else{
 //     console.log('invalid credentials');
@@ -23,40 +28,40 @@
 
 
 // Get the user input and store it in the variable
-let score = prompt("Please enter your score: ");
-console.log('Score before trimming: ' + score);
-console.log('length before trimming: ' + score.length);
+// let score = prompt("Please enter your score: ");
+// console.log('Score before trimming: ' + score);
+// console.log('length before trimming: ' + score.length);
 
-// Remove any leading or trailing whitespaces from the score
-score = score.trim();
-console.log('Score after trimming: ' + score);
-console.log('length after trimming: ' + score.length);
+// // Remove any leading or trailing whitespaces from the score
+// score = score.trim();
+// console.log('Score after trimming: ' + score);
+// console.log('length after trimming: ' + score.length);
 
 
-// check if score is greater than 0
-if(score.length > 0 && !isNaN(score) ){
-    // Convert Score into a number
-    score = Number(score);
-    console.log('Score after converting to number: ' + score);
-    if(score >=0 && score <= 100){
-        if(score >= 70){
-            console.log(`Congratulations, you scored ${score}, you have an A`);
-        }else if(score >=60){
-            console.log('Congratulations, you scored ' + score + ', You have a B');
-        }else if(score >=50){
-            console.log('Congratulations, you scored a C');
-        }else if(score >=45){
-            console.log('Congratulations, you scored a D');
-        }else{
-            console.log('Congratulations, you scored an F, come back next year Dummy');
-        }
-    }else{
-        console.log('invalid score, out of range')
-    }
+// // check if score is greater than 0
+// if(score.length > 0 && !isNaN(score) ){
+//     // Convert Score into a number
+//     score = Number(score);
+//     console.log('Score after converting to number: ' + score);
+//     if(score >=0 && score <= 100){
+//         if(score >= 70){
+//             console.log(`Congratulations, you scored ${score}, you have an A`);
+//         }else if(score >=60){
+//             console.log('Congratulations, you scored ' + score + ', You have a B');
+//         }else if(score >=50){
+//             console.log('Congratulations, you scored a C');
+//         }else if(score >=45){
+//             console.log('Congratulations, you scored a D');
+//         }else{
+//             console.log('Congratulations, you scored an F, come back next year Dummy');
+//         }
+//     }else{
+//         console.log('invalid score, out of range')
+//     }
    
-}else{
-    console.log('Invalid score');
-}
+// }else{
+//     console.log('Invalid score');
+// }
 
 
 
@@ -121,9 +126,9 @@ switch (num){
         console.log('invalid number');
 }
 
-let word1 = 'happy';
-let word2 = 'birthday';
-let word3 = 'Bassey';
+// let word1 = 'happy';
+// let word2 = 'birthday';
+// let word3 = 'Bassey';
 
 // string concatenation method
 // console.log(word1 + ' ' + word2  + ' ' + word3);

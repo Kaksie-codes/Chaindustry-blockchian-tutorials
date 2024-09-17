@@ -5,10 +5,14 @@
 // for loops
 
 // for (initialization; condition; increment) {
-//     // code to be executed
+    // code to be executed
 // }
 
 // for(let num = 10; num >= 0; num--){
+//     console.log(num);
+// }
+
+// for(let num = 0; num <= 10; num++){
 //     console.log(num);
 // }
 
@@ -37,7 +41,7 @@
   
 // let isShopOpen = true;
 
-// while(isShopOpen === true){
+// while(isShopOpen){
 //     console.log('Buy Bread');
 //     isShopOpen = false;
 // }
@@ -56,11 +60,11 @@
     // code to be executed
 //   } while (condition);
   
-// let i = 0;
+// let i = 10;
 // do {
 //   console.log(i);
-//   i++;
-// } while (i < 5);
+//   i--;
+// } while (i >= 0);
 
 
 // for...in Loop: Used to iterate over the properties of an object.
@@ -71,25 +75,21 @@
 
 // example
 let person = { 
-    fname: "John", 
-    lname: "Doe", 
-    age: 25 
+    firstName: "John", 
+    lastName: "Doe", 
+    age: 25  
 };
 
+// console.log(person.lastName);
+// console.log(person['firstName']);
 
-// for (let prop in person) {
-//     // console.log(prop + ": " + person[prop]);
-//     console.log(`${prop}: ${person[prop]}`);
+// for (let dog in person) {
+//     // console.log(dog);
+//     console.log(dog + ": " + person[dog]);
+//     // console.log(`${prop}: ${person[prop]}`);
 // }
 
-// // bracket notation
-// console.log(person["lname"]);
 
-// // Dot Notation
-// console.log(person.lname);
-
-// console.log(person.lname);
-// console.log(person['fname']);
 
 let firstname = 'Jack';
 let lastname = 'Robinson'
@@ -113,18 +113,24 @@ _name+='stella'
 // example
 let numbers = [1, 2, 3, 4, 5];
 
-for (let thing of numbers) {
-  console.log(thing);
-}
+// for (let thing of numbers) {
+//   console.log(thing);
+// }
 
+let nums = [];
+console.log(nums);
+nums.push(1);
+console.log(nums);
+nums.push(10);
+console.log(nums);
 
 let dogs = ['german shepard', 'Terrier', 'ekuke']
 
-for(let dog of dogs){
-    console.log(dog);
-}
+// for(let dog of dogs){
+//     console.log(dog);
+// }
 
-console.log(dogs.length);
+// console.log(dogs.length);
 
 // console.log(dogs[5]);
 
