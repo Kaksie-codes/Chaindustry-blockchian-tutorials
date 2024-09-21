@@ -36,10 +36,10 @@ const person = {
 //   You can access object properties in two ways:
   
 //   Dot Notation:
-  console.log(person.name);  // Output: John
+//   console.log(person.name);  // Output: John
 
 // Bracket Notation (useful when keys are dynamic or have spaces):
-  console.log(person['age']);  // Output: 30
+//   console.log(person['age']);  // Output: 30
 
 
 //   Methods
@@ -53,8 +53,8 @@ person.drive('Toyota');
 // Destructuring allows you to unpack values from objects into distinct variables.
 
 const { name, age } = person;
-console.log(name);  // Output: John
-console.log(age);   // Output: 30
+// console.log(name);  // Output: John
+// console.log(age);   // Output: 30
 
 
 // Nested Object Destructuring
@@ -69,8 +69,8 @@ const student = {
   
   const { scores: { math, english } } = student;
   
-  console.log(math);    // Outputs: 90
-  console.log(english); // Outputs: 85
+//   console.log(math);    // Outputs: 90
+//   console.log(english); // Outputs: 85
   
 
 
@@ -79,7 +79,7 @@ const student = {
 
 // Copying an Object
 const person2 = { ...person, city: 'New York' };
-console.log(person2);
+// console.log(person2);
 
 // Copying an Array
 const cars = ['Toyota', 'Ford', 'BMW'];
@@ -91,7 +91,7 @@ const obj1 = { x: 1, y: 2 };
 const obj2 = { y: 5, z: 3 };
 
 const merged = { ...obj1, ...obj2 }; // `y` will be overwritten by obj2's `y`
-console.log(merged);  // Outputs: { x: 1, y: 5, z: 3 }
+// console.log(merged);  // Outputs: { x: 1, y: 5, z: 3 }
 
 
 
@@ -101,7 +101,7 @@ console.log(merged);  // Outputs: { x: 1, y: 5, z: 3 }
 const person3 = { name: 'John', age: 30 };
 const updatedPerson = { ...person3, city: 'lagos', age: 35 };
 
-console.log(updatedPerson);
+// console.log(updatedPerson);
 
 
 // Deleting Properties in an Object
@@ -109,7 +109,7 @@ const person4 = { name: 'John', age: 30, city: 'New York' };
 const deletedPerson = { ...person4 };
 delete deletedPerson.city;
 
-console.log(deletedPerson);
+// console.log(deletedPerson);
 
 
 
@@ -119,16 +119,16 @@ console.log(deletedPerson);
 // Object.keys()
 // Returns an array of the object’s keys.
 const citizen = { name: 'John', age: 30 };
-console.log(Object.keys(citizen));
+// console.log(Object.keys(citizen));
 
 // Object.values()
 // Returns an array of the object’s values.
-console.log(Object.values(citizen));
+// console.log(Object.values(citizen));
 
 
 // Object.entries()
 // Returns an array of key-value pairs.
-console.log(Object.entries(citizen));
+// console.log(Object.entries(citizen));
 
 
 // this Keyword
@@ -150,18 +150,18 @@ const myName = 'Mark';
 const myAge = 22;
 
 const myDetails = { myName, myAge };
-console.log(myDetails);
+// console.log(myDetails);
 
 
 // Object Property Computation
 // You can dynamically define property keys using square brackets.
 const keyName = 'color';
-const car = {
+const myCar = {
   brand: 'BMW',
   [keyName]: 'red'
 };
 
-console.log(car);
+// console.log(car);
 
 
 // Object freeze() and seal()
@@ -170,14 +170,14 @@ console.log(car);
 const obj = { a: 1 };
 Object.freeze(obj);
 obj.a = 2;  // No effect, because the object is frozen
-console.log(obj);
+// console.log(obj);
 
 // Object.seal(): Allows modification of existing properties but prevents new properties from being added.
-const obj = { a: 1 };
+const myObj = { a: 1 };
 Object.seal(obj);
-obj.a = 2;  // Allowed
-obj.b = 3;  // Not allowed
-console.log(obj);
+myObj.a = 2;  // Allowed
+myObj.b = 3;  // Not allowed
+// console.log(obj);
 
 
 
