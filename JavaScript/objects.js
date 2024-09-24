@@ -83,7 +83,7 @@ const student = {
 const {
   scores: { english, math },
 } = student;
-console.log(english);
+// console.log(english);
 
 //   console.log(math);    // Outputs: 90
 //   console.log(english); // Outputs: 85
@@ -111,7 +111,7 @@ const { colors,
     },
   },
 } = myVehicle;
-console.log(colors[4][1], batterySize, chargers[2]);
+// console.log(colors[4][1], batterySize, chargers[2]);
 // console.log({ batterySize });
 // console.log(chargers[2]);
 
@@ -119,12 +119,17 @@ console.log(colors[4][1], batterySize, chargers[2]);
 // The spread operator (...) allows you to copy or merge objects and arrays, as well as to unpack elements.
 
 // Copying an Object
-const person2 = { ...person, city: "New York" };
+const person1 = { _name: 'John', age: 34 };
+const person2 = { ...person1, city: "New York" };
+const person5 = {...person2}
 // console.log(person2);
+// console.log(person5);
 
 // Copying an Array
 const cars = ["Toyota", "Ford", "BMW"];
 const cars2 = [...cars, "Honda"];
+// console.log(cars2);
+
 
 // Merging Objects
 // You can merge multiple objects using the spread operator:
@@ -144,9 +149,11 @@ const updatedPerson = { ...person3, city: "lagos", age: 35 };
 
 // Deleting Properties in an Object
 const person4 = { name: "John", age: 30, city: "New York" };
-const deletedPerson = { ...person4 };
-delete deletedPerson.city;
-
+// const deletedPerson = { ...person4 };
+// delete deletedPerson.city;
+for(let [key, value] of Object.entries(person4)){
+  console.log(key, value);
+}
 // console.log(deletedPerson);
 
 // Object Methods
@@ -155,15 +162,15 @@ delete deletedPerson.city;
 // Object.keys()
 // Returns an array of the object’s keys.
 const citizen = { name: "John", age: 30 };
-// console.log(Object.keys(citizen));
+console.log(Object.keys(citizen));
 
 // Object.values()
 // Returns an array of the object’s values.
-// console.log(Object.values(citizen));
+console.log(Object.values(citizen));
 
 // Object.entries()
 // Returns an array of key-value pairs.
-// console.log(Object.entries(citizen));
+console.log(Object.entries(citizen));
 
 // this Keyword
 // In JavaScript, this refers to the current object the code is being written in.
@@ -175,7 +182,42 @@ const user = {
   },
 };
 
-user.greet();
+// user.greet();
+
+const myStudent = {
+  name: "Peter",
+  scores: [-25, -80, -51, -95, -10, -12, -40],
+  getHighestScore: function(){
+    let highestScore = this.scores[0];
+    for(let i = 0; i < this.scores.length; i++) {
+      if(this.scores[i] > highestScore) {
+        highestScore = this.scores[i]; 
+      } 
+    }
+    console.log(`${this.name}'s highestScore was ${highestScore}`);
+  },
+  getLowestScore: function(){
+    let lowestScore = this.scores[0];
+    for(let i = 0; i < this.scores.length; i++) {
+      if(this.scores[i] < lowestScore) {
+        lowestScore = this.scores[i]; 
+      } 
+    }
+    console.log(`${this.name}'s lowestScore was ${lowestScore}`);
+  },
+  calculateAverageScore: function(){
+    let sum = 0;
+    for(let i = 0; i < this.scores.length; i++) {
+      sum = sum + this.scores[i]; 
+    }
+    console.log(`${this.name}'s average score was ${sum / this.scores.length}`);
+    
+  }
+}
+
+// myStudent.getHighestScore();
+// myStudent.getLowestScore();
+// myStudent.calculateAverageScore();
 
 //   Object Shorthand Syntax
 //   When creating objects, if the key and variable name are the same, you can use shorthand syntax:
@@ -187,13 +229,21 @@ const myDetails = { myName, myAge };
 
 // Object Property Computation
 // You can dynamically define property keys using square brackets.
-const keyName = "color";
+let keyName = "color";
+const radomNumber = Math.floor(Math.random() * 20);
+keyName+=radomNumber;
+const fruit = 'Cashew';
+
 const myCar = {
   brand: "BMW",
   [keyName]: "red",
+  [fruit]: 'tart'
 };
 
-// console.log(car);
+Object.seal(myCar);
+myCar.mileage = 10;
+myCar.brand = "Tesla"
+console.log(myCar);
 
 // Object freeze() and seal()
 
