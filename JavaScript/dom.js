@@ -21,7 +21,6 @@
 // change their content, and respond to user actions.
 
 
-
 // Selecting Elements
 // To change something on your webpage, 
 // you first need to "select" or "grab" the element you want to modify. 
@@ -32,46 +31,58 @@
 
 // document.getElementById()
 const selectedH1 = document.getElementById('title');
-console.log(selectedH1);
+// console.log(selectedH1);
 
 // 2.) document.getElementsByClassName()
 // Usage: Retrieves a collection of elements with the specified class name..
-const headers = document.getElementsByClassName('main-header');
-console.log(headers);
+const headers = document.getElementsByClassName('nice');
+// console.log(headers);
 
 // 3.) document.getElementsByTagName()
 // Usage: Retrieves a collection of elements with the specified tag name..
 
 const myParagraph = document.getElementsByTagName('p');
-console.log(myParagraph);
+// console.log(myParagraph);
 
 // 4.) document.querySelector()
 // Usage: Retrieves the first element that matches a specified CSS selector.
 const mainheaderElement = document.querySelector('h3.main-header');
-console.log(mainheaderElement);
-mainheaderElement.innerText = 'Happy Hour';
+// console.log(mainheaderElement);
+mainheaderElement.innerText += ' Happy Hour';
 mainheaderElement.style.color = 'Red'
 
 // 5.) document..querySelectorAll()
 // Usage: Retrieves all elements that match a specified CSS selector
 const allSpecialHeadings = document.querySelectorAll('h3.main-header');
-console.log(allSpecialHeadings);
+// console.log(allSpecialHeadings);
 
-// const AfricanTExt = document.querySelector('span h3');
-const AfricanTExt = document.querySelector('section.box h3');
-AfricanTExt.style.color = 'green';
+// // const AfricanTExt = document.querySelector('span h3');
+// const AfricanTExt = document.querySelector('section.box h3');
+// AfricanTExt.style.color = 'green';
+const button = document.querySelector('button');
 
+let count = 0;
+const colors = ["#0000ff", "red","green", "purple", "brown", "pink", "orange", "maroon", "black", "cyan" ];
+let randomIndex;
+function Clicked(){
+    count++;
+    randomIndex = Math.floor(Math.random() * colors.length);
+    targetDiv.style.backgroundColor = colors[randomIndex];
+    targetDiv.innerText = count;
+}
 
 const targetDiv = document.getElementById('box');
-console.log(targetDiv);
+targetDiv.addEventListener('click', Clicked)
+// console.log(targetDiv);
 
-targetDiv.style.backgroundColor = 'blue';
+targetDiv.style.backgroundColor = colors[0];
 targetDiv.style.height = '300px';
 targetDiv.style.width = '300px';
 targetDiv.style.color = '#fff';
 targetDiv.style.fontSize = '50px';
 targetDiv.style.display = 'grid';
 targetDiv.style.placeContent = 'center';
+targetDiv.innerText = count;
 
 // const whorepresentswho = 'Jason'
 
@@ -93,13 +104,12 @@ targetDiv.style.placeContent = 'center';
 // Can lead to security vulnerabilities (like XSS attacks) if not used carefully, especially with user input.
 
     //Example
-    // const element = document.getElementById('example');
-    // console.log(element);
-    // console.log(element.innerHTML);
+    // const example = document.getElementById('example');
+    // console.log(example);
+    // console.log(example.innerHTML);
 
-    // element.innerHTML = `<p>Hidden text</p><p>Visible text</p>`;
-    // console.log(element);
-    // console.log(element.innerHTML);
+    // example.innerHTML = `<img src="https://images.pexels.com/photos/5592604/pexels-photo-5592604.jpeg?auto=compress&cs=tinysrgb&w=600" alt="example image" height="50" width="50" />`;
+    
 
 // 2. textContent
 // Purpose: Gets or sets the text content of an element and all its descendants.
@@ -109,7 +119,7 @@ targetDiv.style.placeContent = 'center';
     //Example
     // const element = document.getElementById('example');
     // console.log(element.textContent);
-
+    // element,textContent = `<img src="https://images.pexels.com/photos/5592604/pexels-photo-5592604.jpeg?auto=compress&cs=tinysrgb&w=600" alt="example image" height="50" width="50" />`
     // element.textContent = `<p>Hidden text</p><p>Visible text</p>`
 
 // 3. innerText
@@ -122,6 +132,8 @@ targetDiv.style.placeContent = 'center';
     const element = document.getElementById('example');
     console.log(element.innerText);
 
-    // const word = document.getElementById('heading')
-    // word.innerText = `<p>Hidden text</p>
-    //         <p>Visible text</p>`
+   
+    element.innerText = `<p>Hidden text</p>
+            <p>Visible text</p>`
+
+
