@@ -19,7 +19,8 @@
 
 
 // Common Types of Event Listeners
-const button = document.getElementById("myButton");
+const button = document.querySelector("button");
+const body = document.querySelector("body");
 
 console.log(button);
 
@@ -28,7 +29,8 @@ console.log(button);
 // 1.) Click: Triggered when an element is clicked.
 
 // const handleClick = () => {
-//     alert("Button was clicked!");
+//     // alert("Button was clicked!");
+//     body.style.backgroundColor = 'red';
 // }
 
 // button.addEventListener("click", handleClick);
@@ -40,9 +42,10 @@ console.log(button);
 
 
 // 2.) dblclick: Triggered when an element is double-clicked.
-// button.addEventListener("dblclick", function() {
-//     alert("Button was double-clicked!");
-//   });
+button.addEventListener("dblclick", function() {
+    // alert("Button was double-clicked!");
+    body.style.backgroundColor = 'blue';
+  });
 
 // 3.) mouseover: Triggered when the mouse pointer is moved over an element.
 
@@ -132,15 +135,15 @@ const form = document.getElementById("myForm");
 
 
 // Removing Event Listeners
-function handleClick() {
-    alert("Button clicked!");
-  }
+// function handleClick() {
+//     alert("Button clicked!");
+//   }
   
   
-  button.addEventListener("click", handleClick);
+// button.addEventListener("click", handleClick);
   
-  // Later, remove the event listener
-  button.removeEventListener("click", handleClick);
+// // Later, remove the event listener
+// button.removeEventListener("click", handleClick);
   
   
 
