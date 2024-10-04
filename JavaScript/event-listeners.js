@@ -42,10 +42,10 @@ console.log(button);
 
 
 // 2.) dblclick: Triggered when an element is double-clicked.
-button.addEventListener("dblclick", function() {
-    // alert("Button was double-clicked!");
-    body.style.backgroundColor = 'blue';
-  });
+// button.addEventListener("dblclick", function() {
+//     // alert("Button was double-clicked!");
+//     body.style.backgroundColor = 'blue';
+//   });
 
 // 3.) mouseover: Triggered when the mouse pointer is moved over an element.
 
@@ -56,26 +56,26 @@ button.addEventListener("dblclick", function() {
 // 4.) mouseout: Triggered when the mouse pointer is moved out of an element.
 
 // button.addEventListener("mouseout", function() {
-//   button.style.backgroundColor = "green";
+//   button.style.backgroundColor = "#4CAF50";
 // });
 
 // B.) Keyboard Events
 // 1.) keydown: Triggered when a key is pressed down.
-// document.addEventListener("keydown", function(event) {
-//     console.log(event);
-//     console.log("Key pressed: " + event.key);
-//     if(event.keyCode === 13){
-//         alert('You clicked on Enter')
-//     }
-//     button.style.backgroundColor = "yellow";
-// });
+document.addEventListener("keydown", function(e) {
+    console.log(e);
+    console.log("Key pressed: " + e.key);
+    if(e.keyCode === 13){
+        alert('You clicked on Enter');
+    }
+    button.style.backgroundColor = "yellow";
+});
 
 // 2.) keyup: Triggered when a key is released.
-// document.addEventListener("keyup", function(event) {
-//     const body = document.querySelector("body");
-//     body.style.backgroundColor = "pink";
-//     console.log("Key released: " + event.key);
-//   });
+document.addEventListener("keyup", function(event) {
+    const body = document.querySelector("body");
+    body.style.backgroundColor = "pink";
+    console.log("Key released: " + event.key);
+  });
 
 // 3.) keypress: Triggered when a key is pressed (deprecated, use keydown or keyup).
 // document.addEventListener("keypress", function(event) {
