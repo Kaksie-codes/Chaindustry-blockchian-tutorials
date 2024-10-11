@@ -26,7 +26,7 @@ const sayMyName = (name) => {
 }
 
 function logGreeting(myFunc, name) {
-    // sayMyName(name);
+    sayMyName(name);
     myFunc(name);
 }
   
@@ -40,16 +40,18 @@ function logGreeting(myFunc, name) {
 // let answer = Add(1, 2);
 
 // console.log({answer});
+// console.log({answer:answer});
 
 function multiplier(factor) {
     return function(number) {
       return number * factor;
     };
   }
-  
-  const multiplyByTwo = multiplier(2);
-
-//   console.log(multiplyByTwo(5)); // Output: 10
+// const newFunction = multiplier;
+  // console.log(newFunction(5)(100)); // Output: 500  
+// const multiplyByTwo = multiplier(4);
+// console.log(multiplyByTwo)
+// console.log(multiplyByTwo(100)); // Output: 10
 
   
 //   Callbacks  
@@ -67,8 +69,8 @@ function getUserName(callback) {
     console.log(`Hello, ${name}!`);
   }
   
-//   // Passing 'greetUser' as a callback to 'getUserName'
-//   getUserName(greetUser); // Output: Hello, Chad!
+  // Passing 'greetUser' as a callback to 'getUserName'
+  // getUserName(greetUser); // Output: Hello, Chad!
 
 
 // Inbuilt Higher-Order Functions (Array Methods)
@@ -79,18 +81,27 @@ function getUserName(callback) {
 // Purpose: The forEach method executes a provided function once for each array element.
 // Use Case: It’s used to perform an action on every item in an array, but it does not return anything.
 
+function repeatAction(n, action) {
+    for (let i = 0; i < n; i++) {
+      action(i);
+    }
+  }
+  
+  // repeatAction(6, (index) => {
+  //   console.log(`This is iteration ${index + 1}`);
+  // });
+
 // const numbers = [1, 2, 3, 4, 5];
 // const multiplyBy = (number) => {
 //     console.log(number * 2);
 // }
 // numbers.forEach((number) => multiplyBy(number));
 
-// numbers.forEach(function(number){
-//     console.log(number * 2);    
-// });
-
-// numbers.forEach((number) => console.log(number * 2));
-
+// numbers.forEach(function(number){console.log(number * 2)});
+// console.log('before', numbers)
+// let myNums = numbers.forEach((number) => console.log(number * 2));
+// console.log({myNums})
+// console.log('after', numbers)
 
 
 // B.) map
@@ -122,7 +133,7 @@ function getUserName(callback) {
 // Purpose: The find method returns the first element in the array that satisfies the provided testing function. If no element is found, it returns undefined.
 // Use Case: It’s used when you need to find the first matching element based on a condition.
 // const users = [
-//     { name: "Alice", age: 25 },
+//     { name: "Alice", age: 37 },
 //     { name: "Bob", age: 30 },
 //     { name: "Nsikak", age: 37 }
 //   ];
@@ -136,27 +147,27 @@ function getUserName(callback) {
 // Purpose:
 // some checks if at least one element in the array passes the test implemented by the provided function.
 // every checks if all elements in the array pass the test.
-// const numbers = [1, 2, 3, 4];
+const numbers = [1, 2, 3, 4];
 
-// // Using some
-// const hasEven = numbers.some((number) => number % 2 === 0);
+// Using some
+const hasEven = numbers.some((number) => number % 2 === 0);
 // console.log(hasEven); // Output: true (because 2 and 4 are even)
 
-// // Using every
-// const allEven = numbers.every((number) => number % 2 === 0);
+// Using every
+const allEven = numbers.every((number) => number % 2 === 0);
 // console.log(allEven); // Output: false (because not all numbers are even)
 
 
 // Using a Custom Higher-Order Function with a Callback
-function repeatAction(n, action) {
-    for (let i = 0; i < n; i++) {
-      action(i);
-    }
-  }
+// function repeatAction(n, action) {
+//     for (let i = 0; i < n; i++) {
+//       action(i);
+//     }
+//   }
   
-  repeatAction(3, (i) => {
-    console.log(`This is iteration ${i + 1}`);
-  });
+//   repeatAction(3, (i) => {
+//     console.log(`This is iteration ${i + 1}`);
+//   });
 
 
 // console.log("Task 1: Start");
